@@ -1,9 +1,14 @@
 <template>
-  <article>
-    <div class="content">
-      <nuxt-content class="posts" :document="article" />
-    </div>
-  </article>
+  <div>
+    <article>
+      <div class="content">
+        <nuxt-content class="posts" :document="article" />
+      </div>
+    </article>
+    <b-button class="backBtn" variant="outline-primary">
+      <nuxt-link class="links" :to="`/`"> Go back </nuxt-link>
+    </b-button>
+  </div>
 </template>
 
 <script>
@@ -24,5 +29,8 @@ export default {
 }
 .posts {
   font-size: 1.1rem;
+}
+.backBtn {
+  margin: 2em;
 }
 </style>
