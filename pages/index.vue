@@ -57,7 +57,8 @@ export default {
   },
   async asyncData(context) {
     const { $content } = context
-    const articles = await $content('blog').fetch()
+    let articles0 = await $content('blog').fetch()
+    let articles = articles0.reverse()
     console.log(articles)
     return { articles }
   },

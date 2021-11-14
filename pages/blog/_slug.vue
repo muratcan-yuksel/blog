@@ -28,7 +28,7 @@ export default {
   padding: 0 4em 2em 4em;
 }
 .posts {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 .backBtn {
   margin: 2em;
