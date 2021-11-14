@@ -1,11 +1,19 @@
 <template>
   <div id="mainContent">
     <div class="sidebar">
-      <h4 class="contentItem">This blog is (mostly) on solidity language</h4>
-      <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <h2 id="sidebarTitle" class="contentItem">On Solidity</h2>
+      <a
+        class="active"
+        href="https://github.com/muratcan-yuksel"
+        target="”_blank”"
+        >GitHub</a
+      >
+      <a
+        href="https://www.linkedin.com/in/murat-can-y%C3%BCksel-2b1347119/"
+        target="”_blank”"
+        >LinkedIn</a
+      >
+      <nuxt-link :to="`/blog/about`"> about</nuxt-link>
     </div>
 
     <div class="content">
@@ -67,12 +75,18 @@ export default {
 #mainContent {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 }
-body {
+#sidebarTitle {
+  font-weight: 600;
+}
+/* body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-}
+} */
 .article {
-  margin: 2.5em;
+  margin-left: 4em;
+  margin-top: 3em;
+  margin-right: 2em;
+  margin-bottom: 1.5em;
 }
 .contentItem {
   margin: 15px;
@@ -82,10 +96,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 240px;
   background-color: #202020;
   position: fixed;
   height: 100vh;
@@ -96,7 +110,7 @@ body {
 .sidebar a {
   display: block;
   color: white;
-  padding: 16px;
+
   text-decoration: none;
 }
 
