@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div id="mainContent">
     <div class="sidebar">
+      <h4 class="contentItem">This blog is (mostly) on solidity language</h4>
       <a class="active" href="#home">Home</a>
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
@@ -32,11 +33,7 @@ export default {
   components: {
     SideBar,
   },
-  // data() {
-  //   return {
-  //     articles: null,
-  //   }
-  // },
+
   filters: {
     formatDate() {
       return format(new Date(), 'dd MMM yyyy')
@@ -52,19 +49,30 @@ export default {
 </script>
 
 <style scoped>
+#mainContent {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
+.contentItem {
+  margin: 15px;
+}
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
   margin: 0;
   padding: 0;
   width: 200px;
   background-color: #202020;
   position: fixed;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
+  color: white;
 }
 
 .sidebar a {
@@ -94,6 +102,10 @@ div.content {
   .sidebar {
     width: 100%;
     height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
   }
   .sidebar a {
