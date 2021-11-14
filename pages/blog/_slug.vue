@@ -1,7 +1,7 @@
 <template>
   <article>
     <div class="content">
-      <nuxt-content :document="article" />
+      <nuxt-content class="posts" :document="article" />
     </div>
   </article>
 </template>
@@ -20,5 +20,9 @@ export default {
 .content {
   width: 95%;
   margin: 2em;
+  padding: 0 4em 2em 4em;
+}
+.posts {
+  font-size: 1.1rem;
 }
 </style>

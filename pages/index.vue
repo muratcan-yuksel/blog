@@ -13,7 +13,7 @@
         target="”_blank”"
         >LinkedIn</a
       >
-      <nuxt-link :to="`/blog/about`"> about</nuxt-link>
+      <nuxt-link :to="`/blog/about`"> About</nuxt-link>
     </div>
 
     <div class="content">
@@ -22,7 +22,7 @@
         <div class="article" v-for="article in articles" :key="article.id">
           <h1 class="links">
             <nuxt-link class="links" :to="`/blog/${article.slug}/`">
-              {{ article.slug }}
+              {{ article.title }}
             </nuxt-link>
           </h1>
           <p>{{ article.createdAt | formatDate }}</p>
@@ -70,7 +70,7 @@ export default {
 }
 .para {
   color: #515151;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 #mainContent {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
@@ -78,10 +78,7 @@ export default {
 #sidebarTitle {
   font-weight: 600;
 }
-/* body {
-  margin: 0;
-  font-family: 'Lato', sans-serif;
-} */
+
 .article {
   margin-left: 4em;
   margin-top: 3em;

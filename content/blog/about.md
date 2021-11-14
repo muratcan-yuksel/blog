@@ -1,6 +1,8 @@
 ---
-title: about
+title: About
 description: About page
 ---
 
-## this is a post mate
+## About this blog
+
+asdfasdfasdf
