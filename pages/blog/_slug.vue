@@ -32,5 +32,6 @@ export default {
 }
 .backBtn {
   margin: 2em;
+  /* padding: 0 4em 2em 4em; */
 }
 </style>
