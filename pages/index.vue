@@ -9,13 +9,21 @@
     </div>
 
     <div class="content">
-      <h1>My blog</h1>
+      <!-- <h1>My blog</h1> -->
       <div v-if="articles">
-        <div v-for="article in articles" :key="article.id">
-          {{ article.slug }}
-          {{ article.createdAt | formatDate }}
-          {{ article.description }}
-          <nuxt-link :to="`/blog/${article.slug}/`"> Learn more </nuxt-link>
+        <div class="article" v-for="article in articles" :key="article.id">
+          <h1 class="links">
+            <nuxt-link class="links" :to="`/blog/${article.slug}/`">
+              {{ article.slug }}
+            </nuxt-link>
+          </h1>
+          <p>{{ article.createdAt | formatDate }}</p>
+          <p class="para">
+            {{ article.description }}
+            <nuxt-link class="links" :to="`/blog/${article.slug}/`">
+              ...
+            </nuxt-link>
+          </p>
         </div>
       </div>
       <div v-else>
@@ -49,12 +57,22 @@ export default {
 </script>
 
 <style scoped>
+.links {
+  color: black;
+}
+.para {
+  color: #515151;
+  font-size: 1rem;
+}
 #mainContent {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 }
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
+}
+.article {
+  margin: 2.5em;
 }
 .contentItem {
   margin: 15px;
