@@ -61,7 +61,7 @@ body {
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #f1f1f1;
+  background-color: #202020;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -69,13 +69,13 @@ body {
 
 .sidebar a {
   display: block;
-  color: black;
+  color: white;
   padding: 16px;
   text-decoration: none;
 }
 
 .sidebar a.active {
-  background-color: #04aa6d;
+  background-color: #202020;
   color: white;
 }
 
@@ -93,7 +93,7 @@ div.content {
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
-    height: auto;
+    height: 20em;
     position: relative;
   }
   .sidebar a {
