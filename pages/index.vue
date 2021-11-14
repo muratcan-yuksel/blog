@@ -1,5 +1,6 @@
 <template>
   <div>
+    <SideBar />
     <h1>My blog</h1>
     <div v-if="articles">
       <div v-for="article in articles" :key="article.id">
@@ -17,8 +18,12 @@
 
 <script>
 import { format } from 'date-fns'
+import SideBar from '../components/SideBar.vue'
 export default {
   name: 'Blog',
+  components: {
+    SideBar,
+  },
   // data() {
   //   return {
   //     articles: null,

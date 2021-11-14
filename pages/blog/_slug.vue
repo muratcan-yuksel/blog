@@ -1,6 +1,8 @@
 <template>
   <article>
-    <nuxt-content :document="article" />
+    <div class="content">
+      <nuxt-content :document="article" />
+    </div>
   </article>
 </template>
 
@@ -14,4 +16,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.content {
+  width: 100%;
+}
+</style>
