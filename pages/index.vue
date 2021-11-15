@@ -49,7 +49,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+body {
+  background-color: whitesmoke;
+}
 .links {
   color: black;
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="#">
+      <b-navbar-brand>
         <nuxt-link id="menuLink" :to="`/`"> On Solidity</nuxt-link>
       </b-navbar-brand>
 
