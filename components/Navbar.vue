@@ -2,10 +2,8 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand href="#">
-        <nuxt-link id="menuLink" :to="`/`">
-          On Solidity</nuxt-link
-        ></b-navbar-brand
-      >
+        <nuxt-link id="menuLink" :to="`/`"> On Solidity</nuxt-link>
+      </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
