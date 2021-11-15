@@ -1,23 +1,7 @@
 <template>
   <div id="mainContent">
-    <div class="sidebar">
-      <h2 id="sidebarTitle" class="contentItem">On Solidity</h2>
-      <a
-        class="active"
-        href="https://github.com/muratcan-yuksel"
-        target="”_blank”"
-        >GitHub</a
-      >
-      <a
-        href="https://www.linkedin.com/in/murat-can-y%C3%BCksel-2b1347119/"
-        target="”_blank”"
-        >LinkedIn</a
-      >
-      <nuxt-link :to="`/blog/about`"> About</nuxt-link>
-    </div>
-
+    <Navbar />
     <div class="content">
-      <!-- <h1>My blog</h1> -->
       <div v-if="articles">
         <div class="article" v-for="article in articles" :key="article.id">
           <h1 class="links">
@@ -43,11 +27,11 @@
 
 <script>
 import { format } from 'date-fns'
-import SideBar from '../components/SideBar.vue'
+import Navbar from '../components/Navbar.vue'
 export default {
   name: 'Blog',
   components: {
-    SideBar,
+    Navbar,
   },
 
   filters: {
@@ -69,87 +53,10 @@ export default {
 .links {
   color: black;
 }
-.para {
-  color: #515151;
-  font-size: 1.5rem;
+.content {
+  margin: 2em;
 }
 #mainContent {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-}
-#sidebarTitle {
-  font-weight: 600;
-}
-
-.article {
-  margin-left: 4em;
-  margin-top: 3em;
-  margin-right: 2em;
-  margin-bottom: 1.5em;
-}
-.contentItem {
-  margin: 15px;
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  width: 240px;
-  background-color: #202020;
-  position: fixed;
-  height: 100vh;
-  overflow: auto;
-  color: white;
-}
-
-.sidebar a {
-  display: block;
-  color: white;
-
-  text-decoration: none;
-}
-
-.sidebar a.active {
-  background-color: #202020;
-  color: white;
-}
-
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
-
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: 20em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .sidebar a {
-    float: left;
-  }
-  div.content {
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
+  background-color: whitesmoke;
 }
 </style>
